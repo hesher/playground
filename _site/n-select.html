@@ -1,0 +1,7 @@
+<div>
+    <ul>
+        <li ng-repeat="opt in opts">
+            <label ><input type="checkbox" class="cb-opt" ng-model="result[opt.val]" ng-change="updateModel()"/>{{opt.name}}</label>
+        </li>
+    </ul>
+</div>

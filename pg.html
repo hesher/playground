@@ -1,0 +1,17 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+        "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+
+    <script type="text/javascript" src="./angular.js"></script>
+    <script type="text/javascript" src="./pg.js"></script>
+    <link href="./pg.css" rel="stylesheet" type="text/javascript">
+    <title>Playground</title>
+</head>
+<body ng-app="playground" ng-controller="test">
+    People for team:
+    <n-select opts='options' ng-model="peopleForTeam" server-model="base.peopleForTeam" ></n-select>
+    People for Dinner:
+    <n-select opts='options' ng-model="peopleForDinner" server-model="base.peopleForDinner" ></n-select>
+</body>
+</html>
