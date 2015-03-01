@@ -49,10 +49,11 @@ angular.module('playground', [])
 })
 .directive('serverModel', function () {
   return {
+    require: '?ngModel',
     restrict: 'A',
-    link: function (scope, elm, attrs) {
-      scope.$watch(attrs.ngModel, function (newValue) {
-        console.log(attrs.serverModel + ' Changed to ' + newValue);
+    link: function (scope, elm, attrs, ngModel) {
+      ngModel.$viewChangeListeners.push(function () {
+        console.log(attrs.serverModel + ' Changed to ' + ngModel.$modelValue);
       });
     }
   };
